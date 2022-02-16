@@ -1,13 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import ThreeApp from "../components/ThreeContainer.js";
-import app from "../threejs/ThreeApp";
+import ThreeApp from "../threejs/ThreeApp";
+import { useLayoutEffect } from "react";
 
 export default function Home() {
+  useLayoutEffect(() => {
+    new ThreeApp({ selector: ".threejs" });
+    //or you can use new ThreeApp({})
+    //it will create a new element and append it to the document.body
+  }, []);
+
   return (
     <>
-      <ThreeApp app={app} style={{ height: "100vh" }}></ThreeApp>
+      <div className="threejs" style={{ height: "100vh" }} />
     </>
   );
 }
