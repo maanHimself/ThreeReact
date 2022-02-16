@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) react project with webGL and plain ThreeJS 
+This is a [Next.js](https://nextjs.org/) react boilerplate with webGL and plain ThreeJS 
 
 
 ## Getting Started
