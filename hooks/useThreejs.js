@@ -10,6 +10,6 @@ export const useRunThreejs = ({ selector, ThreeClass }) => {
       el.style.height = "100vh";
       document.body.appendChild(el);
     }
-    new ThreeClass({ el });
+    new ThreeClass(el);
   }, []);
 };

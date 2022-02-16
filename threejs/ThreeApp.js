@@ -3,7 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as shader from "./Shaders/Shader";
 
 export class Sketch {
-  constructor({ el }) {
+  constructor(el) {
     this.scene = new THREE.Scene();
     this.container = el;
     this.width = this.container.offsetWidth;
