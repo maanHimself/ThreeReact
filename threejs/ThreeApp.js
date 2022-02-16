@@ -3,16 +3,18 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as shader from "./Shaders/Shader";
 
 export default class Sketch {
-  constructor({ selector }) {
+  constructor(selector) {
+    console.log(selector);
     this.scene = new THREE.Scene();
-    if (selector) {
-      this.container = document.querySelector(selector);
-    } else {
-      const el = document.createElement("div");
-      el.style.height = "100vh";
-      document.body.appendChild(el);
-      this.container = el;
-    }
+    this.container = selector;
+    // if (selector) {
+    //   this.container = document.querySelector(selector);
+    // } else {
+    //   const el = document.createElement("div");
+    //   el.style.height = "100vh";
+    //   document.body.appendChild(el);
+    //   this.container = el;
+    // }
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
     this.renderer = new THREE.WebGLRenderer();

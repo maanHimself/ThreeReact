@@ -1,16 +1,14 @@
 import ThreeApp from "../threejs/ThreeApp";
 import { useLayoutEffect } from "react";
+import { useThree } from "../hooks/useThree";
 
 export default function Home() {
-  useLayoutEffect(() => {
-    new ThreeApp({ selector: ".threejs" });
-    //or you can use new ThreeApp({})
-    //it will create a new element and append it to the document.body
-  }, []);
+  //The argument for useThree is your threejs main class
+  const canvas = useThree(ThreeApp);
 
   return (
     <>
-      <div className="threejs" style={{ height: "100vh" }} />
+      <div ref={canvas} style={{ height: "100px" }} />
     </>
   );
 }
