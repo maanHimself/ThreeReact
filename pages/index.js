@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <div ref={canvas} style={{ height: "100px" }} />
+      <div ref={canvas} style={{ height: "100hv" }} />
     </>
   );
 }
