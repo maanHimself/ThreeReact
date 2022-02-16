@@ -1,16 +1,11 @@
-import ThreeApp from "../threejs/ThreeApp";
-import { useLayoutEffect } from "react";
-
+import { Sketch } from "../threejs/ThreeApp";
+import { useRunThreejs } from "../hooks/useThreejs";
 export default function Home() {
-  useLayoutEffect(() => {
-    new ThreeApp({ selector: ".threejs" });
-    //or you can use new ThreeApp({})
-    //it will create a new element and append it to the document.body
-  }, []);
-
+  useRunThreejs({ ThreeClass: Sketch, selector: ".threeEl" });
   return (
     <>
-      <div className="threejs" style={{ height: "100vh" }} />
+      <p>this is a three js component</p>
+      <div style={{ height: "500px", width: "700px" }} className="threeEl" />
     </>
   );
 }
