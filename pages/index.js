@@ -1,11 +1,8 @@
-import { Sketch } from "../threejs/ThreeApp";
-import { useRunThreejs } from "../hooks/useThreejs";
+import ThreeApp from "../threejs/ThreeApp";
+import { useThree } from "../hooks/useThree";
+
 export default function Home() {
-  useRunThreejs({ ThreeClass: Sketch, selector: ".threeEl" });
-  return (
-    <>
-      <p>this is a three js component</p>
-      <div style={{ height: "500px", width: "700px" }} className="threeEl" />
-    </>
-  );
+  //The argument for useThree is your threejs main class
+  const container = useThree(ThreeApp);
+  return <div ref={container} style={{ height: "100vh" }} />;
 }
