@@ -84,6 +84,6 @@ let ThreeAppMethods = {
   },
 };
 
-ThreeApp.prototype = { ...ThreeApp.prototype, ...ThreeAppMethods };
+Object.assign(ThreeApp.prototype, ThreeAppMethods);
 
 export default ThreeApp;
